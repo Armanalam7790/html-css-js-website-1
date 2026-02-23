@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: 'Alumni Sans SC', "Saira", sans-serif;
+   scroll-behavior: smooth;
+   scroll-padding: 3rem; 
+}
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+:root{
+    --orange-color: #ff6f01;
+    --secend-color: #dc6640;
+    --red-color: #fb2f28;
+    --text-color:#2e2c2a;
+    --container-color: #f3efea;
+    --bg-color:#fff;
+    --text-alter-color:#454440;
+
+
+}
+body{
+    color:  var(--text-color);
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+
+section{
+    padding: 3rem 0 2rem;
+}
+.container{
+    max-width: 1100px;
+    width:100% ;
+    margin: auto;
+}
+/* header */
+ header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+ }
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    align-items: center;
+    border-bottom: 1px solid var(--text-color);
+    background: var(--container-color);
+}
+.logo img{
+     width: 70px;
+}
+
+.navbar{
+    display: flex;
+    align-items:center ;
+    column-gap: 1.5rem;
+}
+.navbar .nav-link{
+    font-size: 1.35rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-color);
+    transition:  0.4 all cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+.navbar .nav-link:hover{
+    color: var(--orange-color);
+     transition:  0.4 all cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+.nav-icons{
+   display: flex; 
+   align-items: center;
+   gap: 1rem;
+}
+
+.nav-icons i{
+    background: var(--text-color);
+    color: var(--bg-color);
+    font-size:18px ;
+    padding: 8px;
+    border-radius:50% ;
+}
+.nav-icons i:hover{
+    background: var(--orange-color);
+    transition: all 0.3s ease-in-out;
+}
+.menu-icon{
+    background: var(--text-color);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    height: 2.172rem;
+    width: 2.172rem;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+    z-index: 200;
+    transition: all 0.3s ;
+}
+
+.menu-icon  div{
+    display: block;
+    background: var(--bg-color);
+    height: 2px;
+    width: 23px;
+     transition: all 0.3s ;
+
+}
+
+.move .line1{
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+.move .line2{
+    opacity: 0;
+    transform: rotate(-45deg) translate(-5px, 5px);
+}.move .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.home{
+    min-height: 650px;
+    background: var(--container-color);
+    position: relative;
+    padding: 8rem 0 2rem !important;
+}
+
+.home-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.home-text h1{
+text-transform: uppercase;
+font-size: 6.5rem;
+line-height:6.8rem ;
+font-weight: 800;
+}
+
+.home-text p{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-alter-color);
+    text-transform: uppercase;
+    margin-top: 3rem;
+}
+
+
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+heading h2{
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.view-btn{
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solis var(--text-color);
+    padding: 7px 16px;
+    border-radius: 2rem;
+}
+.view-btn:hover{
+    background: var(--text-color);
+    color: var(--bg-color);
+    transition: all 0.3s ease-in-out;
+}
+.categories-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,auto) );
+    gap: 1.5rem;
+}
+.categories-box{
+    background: var(--container-color);
+    padding: 20px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+.categories-box img{
+    max-width: 250px;
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+.categories-box h2{
+    color: var(--text-alter-color);
+    font-size:2.2rem ;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+.categories-box p{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-alter-color);
+    margin: 7px 0 12px;
+}
+
+.about{
+    display:  grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    min-height: 500px;
+}
+
